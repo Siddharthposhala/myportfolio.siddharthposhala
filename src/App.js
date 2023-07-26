@@ -5,11 +5,15 @@
 import "./App.css";
 import SecA from "./secA";
 import SecB from "./secB";
+import SecC from "./secC";
+import SecD from "./secD";
 import React, { useRef, useState, useEffect } from "react";
 
 function App() {
   const home = useRef(null);
   const whoiam = useRef(null);
+  const project = useRef(null);
+  const skills = useRef(null);
 
   const homeClick = () => {
     console.log("homeClick");
@@ -23,6 +27,21 @@ function App() {
       whoiam.current.scrollIntoView({ behavior: "smooth" });
     }
   };
+  const projectClick = () => {
+    if (whoiam.current) {
+      project.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+  const skillsClick = () => {
+    if (whoiam.current) {
+      skills.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const handleRedirect = (url) => {
+    window.location.href = url;
+  };
+
   // ******************************NAVBAR**************************************
   const [isMobile, setIsMobile] = useState(false);
   const [showDrawer, setShowDrawer] = useState(false);
@@ -51,24 +70,24 @@ function App() {
       >
         Who am I
       </button>
-      <a
-        href=" "
+      <button
+        onClick={projectClick}
         className="mr-4 py-2 px-3 text-white transition duration-300 ease-in-out navbar-button text-xl"
       >
         Projects
-      </a>
-      <a
-        href=" "
+      </button>
+      <button
+        onClick={skillsClick}
         className="mr-4 py-2 px-3 text-white transition duration-300 ease-in-out navbar-button text-xl"
       >
         Skils
-      </a>
-      <a
-        href=" "
+      </button>
+      <button
+        onClick={() => handleRedirect("mailto:siddharthposhala020@gmail.com")}
         className="mr-12 py-2 px-3 text-white transition duration-300 ease-in-out navbar-button text-xl"
       >
         Contact
-      </a>
+      </button>
     </div>
   );
 
@@ -94,43 +113,44 @@ function App() {
         >
           &#215;
         </button>
-        <a
-          href=""
-          className="block py-2 px-5 text-white transition duration-300 ease-in-out navbar-button text-xl mr-8"
+        <br />
+        <button
+          className="mr-5 py-2 px-3 text-white transition duration-300 ease-in-out navbar-button text-xl "
+          onClick={homeClick}
         >
           Home
-        </a>
-        <a
-          href=" "
-          className="block py-2 px-5 text-white transition duration-300 ease-in-out navbar-button text-xl mr-8"
+        </button>
+        <button
+          onClick={whoiamClick}
+          className="mr-4 py-2 px-3 text-white transition duration-300 ease-in-out navbar-button text-xl"
         >
           Who am I
-        </a>
-        <a
-          href=" "
-          className="block py-2 px-5 text-white transition duration-300 ease-in-out navbar-button text-xl mr-8"
+        </button>
+        <button
+          onClick={projectClick}
+          className="mr-4 py-2 px-3 text-white transition duration-300 ease-in-out navbar-button text-xl"
         >
           Projects
-        </a>
-        <a
-          href=" "
+        </button>
+        <button
+          onClick={skillsClick}
           className="block py-2 px-5 text-white transition duration-300 ease-in-out navbar-button text-xl mr-8"
         >
           Skills
-        </a>
-        <a
-          href=" "
+        </button>
+        <button
+          onClick={() => handleRedirect("mailto:siddharthposhala020@gmail.com")}
           className="block py-2 px-5 text-white transition duration-300 ease-in-out navbar-button text-xl mr-8"
         >
           Contact
-        </a>
+        </button>
       </div>
     </div>
     // ************************************************NAVBAR****************************************************
   );
   return (
     <div>
-      <nav className="relative flex items-center justify-between px-6 py-4  text-white navcolor">
+      <nav className="sticky-nav relative flex items-center justify-between px-6 py-4  text-white navcolor">
         <div className="flex items-center">
           <h1 className="text-2xl font-bold ml-12  mr-2 px-4 py-3 logo">
             Siddharth
@@ -148,6 +168,8 @@ function App() {
       </nav>
       <SecA home={home} />
       <SecB whoiam={whoiam} />
+      <SecC project={project} />
+      <SecD skills={skills} />
     </div>
   );
 }

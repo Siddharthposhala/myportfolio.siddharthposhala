@@ -1,4 +1,16 @@
+/* ***************************************SCROLLBAR*********************************************** */
+::-webkit-scrollbar {
+  width: 8px;
+}
 
+::-webkit-scrollbar-track {
+  background-color: #080713;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #6610f2;
+  border-radius: 8px;
+}
 
 
 /* ********************************************NAVBAR************************************** */
@@ -19,6 +31,12 @@
   border-bottom: 2px solid;
   border-image: linear-gradient(to right, #000000, #5d10db);
   border-image-slice: 1;
+}
+
+.sticky-nav {
+  position: sticky;
+  top: 0;
+  z-index: 999;
 }
 
 /* ****************************************SEC - A********************************** */
@@ -94,8 +112,156 @@
 }
 
 @media screen and (max-width: 992px) {
-  #s-about {
+  .s-about {
       padding: 48px 16px
   }
+}
+
+/* ****************************************SEC - C********************************************** */
+
+.s-projects {
+  padding: 96px 48px;
+  text-align: center;
+  background-color: #080713;
+}
+
+@media screen and (max-width: 992px) {
+  .s-projects {
+    padding: 48px 16px;
+  }
+}
+
+.s-projects .grid-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.s-projects .grid-layout h2 {
+  padding-bottom: 24px;
+  color: #fafafa;
+  font-size: 3rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.s-projects .grid-layout h2 span {
+  color: #6610f2;
+  font-size: 64px;
+}
+
+.s-projects .grid-layout .projects {
+  margin: 24px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 16px;
+  width: 80%;
+}
+
+.s-projects .grid-layout article {
+  background-color: #0b0a19;
+  padding: 15px;
+  border: 1px solid #080713;
+  transition: 0.5s all ease;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.s-projects .grid-layout article:hover {
+  border: 1px solid #6610f2;
+}
+
+.s-projects .grid-layout article h3 {
+  color: #fafafa;
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.s-projects .grid-layout article p {
+  color: #909090;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  margin-bottom: 16px;
+}
+
+.s-projects .grid-layout article a {
+  color: #6610f2;
+  font-size: 1.4rem;
+  font-weight: 400;
+  text-decoration: none;
+  background-color: transparent; /* Remove white background */
+}
+
+.repo-button {
+  background: linear-gradient(225deg, rgba(102, 16, 242, 0.3) 0%, rgba(102, 16, 242, 0) 100%);
+  color: #fafafa;
+  backdrop-filter: blur(10px);
+  padding: 10px 20px; /* Updated padding for a slightly smaller button */
+  width: 225px; /* Set an initial width for the button */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba(102, 16, 242, 0.5);
+  transition: all 0.7s ease;
+  margin-top: 30px;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: "Saira";
+}
+
+.repo-button:hover {
+  width: 275px; /* Expanded width on hover */
+  background: rgba(102, 16, 242, 0.5);
+
+}
+/* *******************************************************sec - D*******************************8 */
+
+.s-skills {
+  padding: 96px 48px;
+  background-color: #080713;
+  padding-bottom: 32px;
+}
+
+@media screen and (max-width: 992px) {
+  .s-skills {
+    padding: 48px 16px;
+  }
+}
+
+.s-skills .grid-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.s-skills .grid-layout h2 {
+  padding-bottom: 24px;
+  color: #fafafa;
+  font-size: 3rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.s-skills .grid-layout h2 span {
+  color: #6610f2;
+  font-size: 64px;
+}
+
+.s-skills .grid-layout .skills {
+  margin: 24px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 16px;
+  width: 80%;
+}
+
+.s-skills .grid-layout article {
+  background-color: #080713;
+  padding: 15px;
+  border: 1px solid #080713;
+  transition: 0.5s all ease;
+  box-sizing: border-box;
+  text-align: left;
 }
 
