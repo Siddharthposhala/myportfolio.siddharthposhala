@@ -46,7 +46,7 @@ const SecA = ({ home }) => {
                   Siddharth Poshala
                 </div>
                 <div className="text-white whitespace-nowrap overflow-hidden animate-typing text-2xl">
-                  web Developer.
+                  Web Developer.
                 </div>
               </h1>
               <div className="flex justify-center md:justify-start">
