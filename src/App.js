@@ -1,244 +1,153 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/jsx-no-target-blank */
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import profile from "./profile.jpg";
-import html from "./html.png";
-import css from "./css.png";
-import js from "./js.png";
-import about from "./about.png";
+
 import "./App.css";
-import React from "react";
+import SecA from "./secA";
+import SecB from "./secB";
+import React, { useRef, useState, useEffect } from "react";
 
 function App() {
+  const home = useRef(null);
+  const whoiam = useRef(null);
+
+  const homeClick = () => {
+    console.log("homeClick");
+    if (home.current) {
+      home.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const whoiamClick = () => {
+    if (whoiam.current) {
+      whoiam.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+  // ******************************NAVBAR**************************************
+  const [isMobile, setIsMobile] = useState(false);
+  const [showDrawer, setShowDrawer] = useState(false);
+
+  const handleWindowResize = () => {
+    setIsMobile(window.innerWidth <= 1250); // Set the breakpoint according to your preference
+  };
+
+  useEffect(() => {
+    handleWindowResize();
+    window.addEventListener("resize", handleWindowResize);
+    return () => window.removeEventListener("resize", handleWindowResize);
+  }, []);
+
+  const tabLinks = (
+    <div className="flex items-center">
+      <button
+        className="mr-5 py-2 px-3 text-white transition duration-300 ease-in-out navbar-button text-xl "
+        onClick={homeClick}
+      >
+        Home
+      </button>
+      <button
+        onClick={whoiamClick}
+        className="mr-4 py-2 px-3 text-white transition duration-300 ease-in-out navbar-button text-xl"
+      >
+        Who am I
+      </button>
+      <a
+        href=" "
+        className="mr-4 py-2 px-3 text-white transition duration-300 ease-in-out navbar-button text-xl"
+      >
+        Projects
+      </a>
+      <a
+        href=" "
+        className="mr-4 py-2 px-3 text-white transition duration-300 ease-in-out navbar-button text-xl"
+      >
+        Skils
+      </a>
+      <a
+        href=" "
+        className="mr-12 py-2 px-3 text-white transition duration-300 ease-in-out navbar-button text-xl"
+      >
+        Contact
+      </a>
+    </div>
+  );
+
+  const hamburgerMenu = (
+    <button
+      className="mr-12 py-2 px-5 text-white transition duration-300 ease-in-out hover:text-gray-300 text-xl text-2xl"
+      onClick={() => setShowDrawer(!showDrawer)}
+    >
+      &#9776;
+    </button>
+  );
+
+  const sideDrawer = (
+    <div
+      className={`absolute top-0 right-0 h-screen w-1/3 navcolor text-white ${
+        showDrawer ? "" : "hidden"
+      }`}
+    >
+      <div className="px-6 py-4">
+        <button
+          className="mr-12 py-2 px-5 text-white transition duration-300 ease-in-out hover:text-gray-300 text-xl text-3xl"
+          onClick={() => setShowDrawer(!showDrawer)}
+        >
+          &#215;
+        </button>
+        <a
+          href=""
+          className="block py-2 px-5 text-white transition duration-300 ease-in-out navbar-button text-xl mr-8"
+        >
+          Home
+        </a>
+        <a
+          href=" "
+          className="block py-2 px-5 text-white transition duration-300 ease-in-out navbar-button text-xl mr-8"
+        >
+          Who am I
+        </a>
+        <a
+          href=" "
+          className="block py-2 px-5 text-white transition duration-300 ease-in-out navbar-button text-xl mr-8"
+        >
+          Projects
+        </a>
+        <a
+          href=" "
+          className="block py-2 px-5 text-white transition duration-300 ease-in-out navbar-button text-xl mr-8"
+        >
+          Skills
+        </a>
+        <a
+          href=" "
+          className="block py-2 px-5 text-white transition duration-300 ease-in-out navbar-button text-xl mr-8"
+        >
+          Contact
+        </a>
+      </div>
+    </div>
+    // ************************************************NAVBAR****************************************************
+  );
   return (
     <div>
-      {/* -------------------------NavBar---------------------------------------     */}
-      <nav className="navbar">
-        <div className="navbar-brand">
-          <h1 className="logo">Siddharth</h1>
-          <h1 className="logo">Poshala</h1>
+      <nav className="relative flex items-center justify-between px-6 py-4  text-white navcolor">
+        <div className="flex items-center">
+          <h1 className="text-2xl font-bold ml-12  mr-2 px-4 py-3 logo">
+            Siddharth
+          </h1>
+          <h1 className="text-2xl font-bold mr-4 logo">Pohala</h1>
         </div>
-
-        <div className="navbar-buttons">
-          <button className="navbar-button">Who am I</button>
-          {/* <button className="navbar-button">About</button> */}
-          <button className="navbar-button">Projects</button>
-          <button className="navbar-button">Contact</button>
-        </div>
+        {isMobile ? (
+          <>
+            {hamburgerMenu}
+            {sideDrawer}
+          </>
+        ) : (
+          tabLinks
+        )}
       </nav>
-      {/* -------------------------Section - A---------------------------------------     */}
-      <section id="s-home">
-        <div className="grid-layout">
-          <div id="home">
-            <div id="home-container-text">
-              <div className="profile-container">
-                <div className="margin2">
-                  <h1>
-                    I am
-                    <br />
-                    <span id="home-name">Siddharth Poshala</span>
-                    <br />
-                    <span className="typewriter">
-                      Front-end developer and Java Programmer
-                    </span>
-                  </h1>
-                  <a
-                    href="#"
-                    rel="noopener"
-                    target="_blank"
-                    className="resume-button"
-                  >
-                    Resume
-                  </a>
-                </div>
-                <div className="profile-pic">
-                  <img src={profile} alt="Profile" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* -------------------------Section - B---------------------------------------     */}
-      <section id="s-about">
-        <div class="grid-layout">
-          <div id="about">
-            <div id="about-photo">
-              <img
-                src={about}
-                width="400px"
-                height="400px"
-                alt="illustration TechWithJoshi"
-                id="photo-iuricode"
-              />
-              <div class="about-figure figure-one icon-one delayExtraBigReveal">
-                <img src={html} width="45px" height="45px" alt="html" />
-              </div>
-              <div class="about-figure figure-two icon-two delayExtraBigReveal">
-                <img src={css} width="45px" height="45px" alt="css" />
-              </div>
-              <div class="about-figure figure-three icon-three delayExtraBigReveal">
-                <img src={js} width="45px" height="45px" alt="js" />
-              </div>
-            </div>
-            <article id="about-text">
-              <h2>
-                Who am I<span>.</span>
-              </h2>
-              <p>
-                My name is Siddharth Poshala, I was born and brought in
-                warangal. I'm currently pursuing my graduation from vardhaman
-                college of engineering specialized in computer science and
-                engineering. I'm developing my skills in full stack development
-                and I have good knowledge of Java and python.
-              </p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      {/* ----------------------------------------------------------------------------- */}
-
-      <section id="s-projects">
-        <div class="grid-layout">
-          <h2>
-            Projects <span>.</span>
-          </h2>
-          <div id="projects">
-            <article>
-              <h3>Portfolio</h3>
-              <p>
-                This Portfolio is created with ReactJS.
-                <a href="https://portfoliov1-techwithjoshi.vercel.app/">
-                  Click here
-                </a>
-                if you want to watch my ReactJS portfolio.
-              </p>
-            </article>
-
-            <article>
-              <h3>College static practical</h3>
-              <p>
-                <a href="/index2.html">Government Polytechnic College, Dahod</a>
-              </p>
-            </article>
-
-            <article>
-              <h3>Coming</h3>
-              <p>Soon</p>
-            </article>
-          </div>
-          <a href="#">Repositories on GitHub</a>
-        </div>
-      </section>
-
-      {/* ------------------------------------------------------------------------------------------------------------------------ */}
-
-      <section id="s-skills">
-        <div class="grid-layout">
-          <div id="skills-text">
-            <h2 class="delaySmallReveal">
-              Knowledge <span>.</span>
-            </h2>
-            <p class="delayMediumReveal changeDescription">
-              *mouse cursor over card to read*
-            </p>
-          </div>
-
-          <div id="skills-cards">
-            <article class="html intervalCardReveal">
-              <span class="skills-cards-name-high">HTML</span>
-              <img
-                src="assets/icons/html.svg"
-                width="60px"
-                height="60px"
-                alt="ícone do html"
-                class="skills-icons"
-              />
-            </article>
-            <article class="css intervalCardReveal">
-              <span class="skills-cards-name-high">CSS</span>
-              <img
-                src="assets/icons/css.svg"
-                width="60px"
-                height="60px"
-                alt="ícone do css"
-                class="skills-icons"
-              />
-            </article>
-            <article class="js intervalCardReveal">
-              <span class="skills-cards-name-high">Javascript</span>
-              <img
-                src="assets/icons/js.svg"
-                width="60px"
-                height="60px"
-                alt="ícone do javascript"
-                class="skills-icons"
-              />
-            </article>
-            <article class="sass intervalCardReveal">
-              <span class="skills-cards-name-high">Sass</span>
-              <img
-                src="assets/icons/sass.svg"
-                width="60px"
-                height="60px"
-                alt="ícone do sass"
-                class="skills-icons"
-              />
-            </article>
-            <article class="react intervalCardReveal">
-              <span class="skills-cards-name-low">ReactJS</span>
-              <img
-                src="assets/icons/react.svg"
-                width="60px"
-                height="60px"
-                alt="ícone do react"
-                class="skills-icons"
-              />
-            </article>
-            <article class="next intervalCardReveal">
-              <span class="skills-cards-name-low">Next.js</span>
-              <img
-                src="assets/icons/next.svg"
-                width="60px"
-                height="60px"
-                alt="ícone do next"
-                class="skills-icons"
-              />
-            </article>
-            <article class="styled intervalCardReveal">
-              <span class="skills-cards-name-low aumento-hover">
-                Styled Components
-              </span>
-              <img
-                src="assets/icons/styled.svg"
-                width="60px"
-                height="60px"
-                alt="ícone do styled"
-                class="skills-icons"
-              />
-            </article>
-            <article class="tailwind intervalCardReveal">
-              <span class="skills-cards-name-low">Tailwind</span>
-              <img
-                src="assets/icons/tailwind.svg"
-                width="60px"
-                height="60px"
-                alt="ícone do tailwind"
-                class="skills-icons"
-              />
-            </article>
-          </div>
-        </div>
-      </section>
-
-      {/* -------------------------Footer---------------------------------------     */}
-      <nav className="navbar">
-        <div className="navbar-brand">
-          <h5 className="logo margin">DevelopedBy - </h5>
-          <h5 className="logo">@SiddharthPoshala</h5>
-        </div>
-      </nav>
+      <SecA home={home} />
+      <SecB whoiam={whoiam} />
     </div>
   );
 }
