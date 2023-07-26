@@ -219,7 +219,7 @@
 
 .s-skills {
   padding: 96px 48px;
-  background-color: #080713;
+  background-color: #0b0a19;
   padding-bottom: 32px;
 }
 
@@ -257,11 +257,17 @@
 }
 
 .s-skills .grid-layout article {
-  background-color: #080713;
+  background-color: #0b0a19;
   padding: 15px;
-  border: 1px solid #080713;
+  background-color: #0b0a19;
   transition: 0.5s all ease;
   box-sizing: border-box;
   text-align: left;
 }
 
+/* **************************************FOOTER************************** */
+.footer{
+  padding: 20px;
+  text-align: center;
+  background-color: #080713;
+}

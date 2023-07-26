@@ -7,6 +7,7 @@ import SecA from "./secA";
 import SecB from "./secB";
 import SecC from "./secC";
 import SecD from "./secD";
+import Footer from "./footer";
 import React, { useRef, useState, useEffect } from "react";
 
 function App() {
@@ -170,6 +171,7 @@ function App() {
       <SecB whoiam={whoiam} />
       <SecC project={project} />
       <SecD skills={skills} />
+      <Footer />
     </div>
   );
 }
