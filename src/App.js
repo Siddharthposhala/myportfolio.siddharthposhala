@@ -121,18 +121,21 @@ function App() {
         >
           Home
         </button>
+        <br />
         <button
           onClick={whoiamClick}
           className="mr-4 py-2 px-3 text-white transition duration-300 ease-in-out navbar-button text-xl"
         >
           Who am I
         </button>
+        <br />
         <button
           onClick={projectClick}
           className="mr-4 py-2 px-3 text-white transition duration-300 ease-in-out navbar-button text-xl"
         >
           Projects
         </button>
+        <br />
         <button
           onClick={skillsClick}
           className="block py-2 px-5 text-white transition duration-300 ease-in-out navbar-button text-xl mr-8"
@@ -153,9 +156,7 @@ function App() {
     <div className="scrollbar-hori">
       <nav className="sticky-nav relative flex items-center justify-between px-6 py-4  text-white navcolor">
         <div className="flex items-center">
-          <h1 className="text-2xl font-bold ml-12  mr-2 px-4 py-3 logo">
-            Siddharth
-          </h1>
+          <h1 className="text-2xl font-bold ml-12 px-2 py-3 logo">Siddharth</h1>
           <h1 className="text-2xl font-bold mr-4 logo">Poshala</h1>
         </div>
         {isMobile ? (
