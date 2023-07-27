@@ -153,7 +153,7 @@ function App() {
     // ************************************************NAVBAR****************************************************
   );
   return (
-    <div className="scrollbar-hori">
+    <div className="scrollbar-hori parent-container">
       <nav className="sticky-nav relative flex items-center justify-between px-6 py-4  text-white navcolor">
         <div className="flex items-center">
           <h1 className="text-2xl font-bold ml-12 px-2 py-3 logo">Siddharth</h1>

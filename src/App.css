@@ -36,12 +36,19 @@
   border-image: linear-gradient(to right, #000000, #5d10db);
   border-image-slice: 1;
 }
+.parent-container {
+  position: relative;
+  height: 100vh; /* Set the height as needed */
+}
 
+/* Sticky element with position: sticky, top: 0, and z-index */
 .sticky-nav {
   position: sticky;
   top: 0;
   z-index: 999;
+  /* Set other styles like background, width, etc. as needed */
 }
+
 
 /* ****************************************SEC - A********************************** */
 
