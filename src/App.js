@@ -150,13 +150,13 @@ function App() {
     // ************************************************NAVBAR****************************************************
   );
   return (
-    <div>
+    <div className="scrollbar-hori">
       <nav className="sticky-nav relative flex items-center justify-between px-6 py-4  text-white navcolor">
         <div className="flex items-center">
           <h1 className="text-2xl font-bold ml-12  mr-2 px-4 py-3 logo">
             Siddharth
           </h1>
-          <h1 className="text-2xl font-bold mr-4 logo">Pohala</h1>
+          <h1 className="text-2xl font-bold mr-4 logo">Poshala</h1>
         </div>
         {isMobile ? (
           <>

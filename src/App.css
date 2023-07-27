@@ -12,6 +12,10 @@
   border-radius: 8px;
 }
 
+.scrollbar-hori {
+  overflow-x: hidden; /* This hides the horizontal scrollbar */
+}
+
 
 /* ********************************************NAVBAR************************************** */
 .navcolor {

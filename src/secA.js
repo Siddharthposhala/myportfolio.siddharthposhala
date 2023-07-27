@@ -41,12 +41,12 @@ const SecA = ({ home }) => {
             </div>
             <div className="text-center md:text-left">
               <h1 className="text-white">
-                <div className="text-2xl">I am</div>
-                <div className="text-5xl md:text-6xl lg:text-7xl font-medium mb-3 mt-3 max-w-lg">
+                <div className="text-lg">I am</div>
+                <div className="text-3xl md:text-4xl lg:text-5xl font-medium mb-3 mt-3 max-w-lg">
                   Siddharth Poshala
                 </div>
-                <div className="text-white whitespace-nowrap overflow-hidden animate-typing text-2xl">
-                  Front-end developer and Java Programmer.
+                <div className="text-white whitespace-nowrap overflow-hidden animate-typing text-lg">
+                  Front-End Developer and Java Programmer.
                 </div>
               </h1>
               <div className="flex justify-center md:justify-start">
@@ -71,7 +71,7 @@ const SecA = ({ home }) => {
                 Siddharth Poshala
               </div>
               <div className="text-white whitespace-nowrap overflow-hidden animate-typing text-2xl">
-                Front-end developer and Java Programmer.
+                Front-End Developer and Java Programmer.
               </div>
             </h1>
             <a
