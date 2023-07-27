@@ -45,8 +45,13 @@ const SecA = ({ home }) => {
                 <div className="text-3xl md:text-4xl lg:text-5xl font-medium mb-3 mt-3 max-w-lg">
                   Siddharth Poshala
                 </div>
+<<<<<<< HEAD
                 <div className="text-white whitespace-nowrap overflow-hidden animate-typing text-lg">
                   Front-End Developer and Java Programmer.
+=======
+                <div className="text-white whitespace-nowrap overflow-hidden animate-typing text-2xl">
+                  Web Developer.
+>>>>>>> b81e231c38be16f8aa2e76d04217d9155bf26fa8
                 </div>
               </h1>
               <div className="flex justify-center md:justify-start">
