@@ -81,7 +81,7 @@ function App() {
         onClick={skillsClick}
         className="mr-4 py-2 px-3 text-white transition duration-300 ease-in-out navbar-button text-xl"
       >
-        Skils
+        Skills
       </button>
       <button
         onClick={() => handleRedirect("mailto:siddharthposhala020@gmail.com")}
