@@ -51,7 +51,7 @@ const SecA = ({ home }) => {
               </h1>
               <div className="flex justify-center md:justify-start">
                 <a
-                  href="https://drive.google.com/file/d/1g4Yyr6pjjwdulGx67RBylblZI_8Bzpyo/view?usp=sharing"
+                  href="https://drive.google.com/file/d/1jJ9fUzi6Elw5Ul9z_7NWmdkC_yVjkYrC/view?usp=sharing"
                   rel="noopener"
                   target="_blank"
                   className=" resume-button block md:inline-block text-center md:text-left"
@@ -75,7 +75,7 @@ const SecA = ({ home }) => {
               </div>
             </h1>
             <a
-              href="https://drive.google.com/file/d/1g4Yyr6pjjwdulGx67RBylblZI_8Bzpyo/view?usp=sharing"
+              href="https://drive.google.com/file/d/1jJ9fUzi6Elw5Ul9z_7NWmdkC_yVjkYrC/view?usp=sharing"
               rel="noopener"
               target="_blank"
               className="resume-button"

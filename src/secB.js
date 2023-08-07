@@ -38,11 +38,10 @@ const SecB = ({ whoiam }) => {
                 Who am I<span className="text-indigo-600 text-4.8xl">.</span>
               </h2>
               <p className="leading-8 text-gray-200 text-xl font-saira md:text-1.5xl mr-5">
-                My name is Siddharth Poshala, I was born and brought in
-                warangal. I'm currently pursuing my graduation from vardhaman
-                college of engineering specialized in computer science and
-                engineering. I'm developing my skills in full stack development
-                and I have good knowledge of Java and python.
+                My name is Siddharth Poshala, I was born and broughtup in
+                warangal. Presently, I'm pursuing B.Tech in CSE from Vardhaman
+                College of Engineering. I'm developing my skills in full stack
+                development and I have good knowledge of Java and python.
               </p>
             </div>
           </div>
