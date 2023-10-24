@@ -12,6 +12,27 @@ const SecC = ({ project }) => {
         </h2>
         <div className="projects">
           <article>
+            <h3>Lead Admin App</h3>
+            <p>
+              Developed a Lead Admin project with three roles (Lead, Admin,
+              Agent) for problem submissions, assignments, and additional
+              features. Utilized ReactJS, HTML, Tailwind for front-end, and
+              Spring, Java, MongoDB for back-end to create a role-based Lead
+              Admin system. Gained experience in full-stack development,
+              role-based access control, and database management while
+              strengthening problem-solving and project management skills
+              through real-world collaboration
+              <br />
+              <a
+                target="_blank"
+                href="https://github.com/Siddharthposhala/MassmutualCasestudy.git"
+              >
+                Click here.
+              </a>
+              &nbsp; If you want to check.
+            </p>
+          </article>
+          <article>
             <h3>Todo App</h3>
             <p>
               I developed a ToDo application using Node.js and JavaScript with
